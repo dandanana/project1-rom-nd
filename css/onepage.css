@@ -1,0 +1,410 @@
+@import url(common.css);
+@font-face {
+  font-family: 'GmarketSansMedium';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansMedium.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'GmarketSansBold';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansBold.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'GmarketSansLight';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansLight.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Cafe24SsurroundAir';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2105_2@1.0/Cafe24SsurroundAir.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* html{scroll-behavior: smooth;} */
+
+body{
+  font-family: 'GmarketSansMedium';
+  color:#4a4646;
+  background-color: #f2fafc;
+}
+
+/* ------------탑버튼 : 수정 필요-----------------*/
+.top{
+  position: fixed;/* 고정시키겠다 */
+  right: 30px;
+  bottom: 30px;
+}
+.top a{
+  display: block;/* 바꿔주기 */
+  width: 100px;
+  height: 100px;
+  background: url(/img/top.png) no-repeat;
+  transition: 0.3s;
+}
+.top a:hover{background-image:url(/img/top2.png);}
+
+/* -------------헤더---------------- */
+
+#wrap{
+  width: 100%;
+  height: 150px;
+  background-color: #c6f2fb;
+}
+header .untilmenu01{
+  /* border: 1px solid #000; */
+  width: 1400px;
+  height: 50px;
+  text-align: right;
+  margin: auto;
+}
+.untilmenu01 a{
+  display: inline-block;
+  margin: 5px;
+  margin-top: 20px;
+  font-size: 12px;
+  font-family: 'Cafe24SsurroundAir';
+  color: dimgray;
+  transition: 0.2s;
+}
+.untilmenu01 a:hover{/* 효과 */
+  color: #7c4dff;
+  font-weight: bold;
+}
+
+/* ++++++++로고 + 탑메뉴+++++++++ */
+nav{
+  background-color: #9c9c9b;
+  width: 100%;
+  height: 100px;
+}
+nav .nav_in{
+  width: 1400px;
+  height: 100px;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.gnb{display: flex;}
+.gnb li{margin: 0 40px;
+margin-bottom: -15px;}
+.gnb li a{
+  color: #fff;
+  font-size: 20px;
+  padding: 15px;
+  transition: 0.3s;
+}
+.gnb li a:hover{/* 탑메뉴 눌렀을 때 효과 */
+  color: #f8bbd0;
+  font-weight: bold;
+  border-radius: 20px;
+  border: 4px solid #f8bbd0;
+}
+
+
+/* ------------메인---------------- */
+main{
+  width: 100%;
+  height: 600px;
+  background: url(/img/main-01.png) no-repeat center center;
+  background-size: 100%;
+}
+main:hover{background-image: url(/img/main-02.png);}
+
+
+/* ------------셀렉션---------------- */
+section{
+  width: 100%;
+}
+section>div{
+  /* border: 1px solid #7c4dff; */
+  margin-top: 80px;}
+
+section h1{
+  font-family: 'GmarketSansBold';
+  font-size: 50px;
+  color:#1b1b1b;
+}
+/* ++++++++++++신제품 타이틀++++++++++++++ */
+.new_title{
+  display: block;
+  text-align: center;
+  margin-top: 50px;
+  margin-bottom: 100px;
+  position: relative;
+}
+
+.new_title:before,
+.new_title:after{
+  content: '';
+  width: 40%;
+  height: 1px;
+  background-color: #afa7a7;
+  position:absolute;
+  top: 30px;
+}
+.new_title:before{left: 0;}
+.new_title:after{right: 0;}
+
+/* ++++++++++++신제품 내용++++++++++++++ */
+.new{
+  width: 1400px;
+  /* background-color: #7c4dff; */
+  /* height: 1000px; */
+  margin: 10px auto;
+  display: flex;
+  justify-content: space-between;
+  align-items:center ;
+}
+.new_img{
+  /* border: 1px solid red; */
+  width: 300px;
+  height: 500px;
+  margin: 0 10px;
+  position: relative;
+}
+.new_img img{
+  width: 300px;
+  height: 300px;}
+
+.front, .back{
+  position: absolute;
+  top:0;
+  text-align: center;
+  width: 100%;
+  height: inherit;
+  box-sizing: border-box;
+  transition: 0.5s;
+}
+.new_img:hover .front{
+  top:0;
+}
+.new_img:hover .back{
+  top:65%;
+  opacity: 1;
+}
+.front{z-index: 1;}/* 이거 넣으면 오버랩 되지 않음 */
+
+.back h3{
+  font-size: 21px;
+}
+.back h4{
+  font-family: 'GmarketSansLight';
+  font-size: 15px;
+  color: rgb(150, 148, 148);
+  padding-top:10px;
+}
+.back p{
+  font-family: 'GmarketSansLight';
+  padding-top: 20px;
+  font-size: 13px;
+  text-decoration: line-through;
+  color: rgb(245, 200, 230);
+}
+.back span{
+  font-family: 'GmarketSansBold';
+  font-size: 18px;
+  color: rgb(248, 62, 124);
+  padding: 5px;
+}
+.back a{
+  display: inline-block;
+  background-color: rgb(154, 208, 253);
+  color: #fff;
+  padding: 5px 15px;
+  border-radius: 20px;
+  font-size: 13px;
+  margin-top: 20px;
+}
+
+/* ++++++++++++카테고리 타이틀++++++++++++++ */
+.cate_title{
+  display: block;
+  text-align: center;
+  margin-top: 150px;
+  margin-bottom: 100px;
+  position: relative;
+}
+.cate_title:before,
+.cate_title:after{
+  content: '';
+  width: 33%;
+  height: 1px;
+  background-color: #afa7a7;
+  position:absolute;
+  top: 40px;
+}
+.cate_title:before{left: 0;}
+.cate_title:after{right: 0;}
+
+/* ++++++++++++카테고리 내용++++++++++++++ */
+.category{
+  display: flex;
+  justify-content: center;
+  align-items:center;
+  height:450px;
+  width: 1400px;
+  margin: auto;
+  text-align: center;/* 텍스트 */
+  /* background-color: #ffffff; */
+  padding: 50px;
+/*  border-radius: 20px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.13); */
+}
+.category a{
+  display: inline-block;
+  border: 5px solid #fff;
+  width: 250px;
+  height: 250px;
+  margin: 15px;
+  border-radius: 50%;
+  background-color: #fdffe2;
+  position: relative;
+  overflow: hidden;
+  /* z-index: 0; */
+}
+.category a:before{
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom:0;
+  width: 100%;
+  height: 0;
+  background-color:#f8eaef;
+  transition: 0.7s;
+}
+.category a:hover:before{height: 100%;}
+
+.category .base img{margin-top: 20px;}
+.category .eyes img{margin-top: 30px;}
+.category .lip img{margin-top: 5px;}
+.category .nail img{margin-top: 10px;}
+.category .tool img{
+  margin-top: 5px;
+  margin-left: 15px;}
+
+.category a img{
+  position: relative;
+  transition: 0.5s;
+}
+.category a:hover img{transform: rotateY(360deg);}
+
+/* ++++++++++++카테고리 내용 폰트++++++++++++++ */
+.base h2{
+  font-size: 40px;
+  color: #a3e0f4;
+  margin-top: 20px;
+}
+.base p{
+  margin-top: 10px;
+  font-family:'GmarketSansLight';
+  font-size:18px;
+  line-height: 30px;
+}
+.eyes h2{
+  font-size: 40px;
+  color: #a3e0f4;
+  margin-top: 20px;
+}
+.eyes p{
+  margin-top: 10px;
+  font-family:'GmarketSansLight';
+  font-size:18px;
+  line-height: 30px;
+}
+.lip h2{
+  font-size: 40px;
+  color: #a3e0f4;
+  margin-top: 20px;
+}
+.lip p{
+  margin-top: 10px;
+  font-family:'GmarketSansLight';
+  font-size:18px;
+  line-height: 30px;
+}
+.nail h2{
+  font-size: 40px;
+  color: #a3e0f4;
+  margin-top: 20px;
+}
+.nail p{
+  margin-top: 10px;
+  font-family:'GmarketSansLight';
+  font-size:18px;
+  line-height: 30px;
+}
+.tool h2{
+  font-size: 40px;
+  color: #a3e0f4;
+  margin-top: 20px;
+}
+.tool p{
+  margin-top: 10px;
+  font-family:'GmarketSansLight';
+  font-size:18px;
+  line-height: 30px;
+}
+
+/* ++++++++++++롬앤-에디션 타이틀++++++++++++++ */
+.edi_title{
+  display: block;
+  text-align: center;
+  margin-top: 150px;
+  margin-bottom: 100px;
+  position: relative;
+}
+.edi_title:before,
+.edi_title:after{
+  content: '';
+  width: 28%;
+  height: 1px;
+  background-color: #afa7a7;
+  position:absolute;
+  top: 40px;
+}
+.edi_title:before{left: 0;}
+.edi_title:after{right: 0;}
+
+/* ++++++++++++롬앤-에디션 내용++++++++++++++ */
+.editions{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+}
+.edition{
+  display: flex;
+  text-align: center;
+  width: 1400px;
+}
+.ed_img{
+  width: 320px;
+  height: 320px;
+  /* border: 1px solid #ddd; */
+  margin: 10px;
+  position: relative;
+}
+.ed_img img{
+  width: 320px;
+  height: 320px;
+}
+.ed_caption{position:absolute;
+  top:0;
+  left: 0;
+  width: inherit;
+  height: inherit;
+  background-color: rgba(0, 0,  0, 0.7);/* 글자가 있는 경우에는 이거 사용 */
+  color: #fff;
+  padding: 40px 20px 20px 20px;
+  box-sizing: border-box;/* 너비와 높이 안에 padding 값을 포함해라 */
+  line-height: 24px;/* 줄간격 */
+  opacity: 0;/* 0에서 */
+  transition: 0.5s;
+}
+
+.ed_img:hover .ed_caption{opacity: 1;}

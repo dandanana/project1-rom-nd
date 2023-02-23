@@ -1,0 +1,136 @@
+[헤더]
+
+로그인 회원가입 마이페이지 장바구니 멤버쉽
+폰트 : 카페24 써라운드에어
+@font-face {
+    font-family: 'Cafe24SsurroundAir';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2105_2@1.0/Cafe24SsurroundAir.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+신제품 카테고리 롬앤-에디션 리뷰
+폰트:지마켓 산스-미디움
+@font-face {
+    font-family: 'GmarketSansMedium';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansMedium.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+[메인]
+NEW
+물먹은 듯 촉촉하고 투명한피부
+베어 워터 쿠션
+자세히 보러가기
+폰트 : new는 세리프체, 나머지는 한글 세리프체 찾아보기
+
+올 그랜드슬램 달성
+한올 라인 ALL SALE
+자세히 보러가기
+폰트:지마켓 산스-미디움
+@font-face {
+    font-family: 'GmarketSansMedium';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansMedium.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+ALL SALE: 세리프체 찾아보기 
+
+
+[셀렉션-신제품]
+롬앤 글래스팅 멜팅 밤
+식물성 보습 오일로 마를 틈 없이 촉촉한 쫀쫀 보습 밤
+
+소비자가 13,000
+판매가 9,900원
+24% OFF
+
+롬앤 베어 원터 쿠션
+속당김,번들거림 없이 산뜻한 수분 광채
+
+소비자가 28,000원
+판매가 19,900원
+29%OFF
+
+롬앤 베러 댄 치크 #리뉴얼
+'뮤트럴 뉴트' 색상 추가, 치크 리뉴얼
+
+소비자가 12,000원
+판매가 9,600원
+20%OFF
+
+롬앤 베러 댄 팔레트 00 라이트 앤 글리터 가든 #비밀정원
+10가지 다양한 색상의 글리터 팔레트
+
+소비자가 32,000원
+판매가23,900원
+25%OFF
+
+폰트:지마켓 산스-미디움, 라이트
+@font-face {
+    font-family: 'GmarketSansMedium';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansMedium.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+[셀렉션-카테고리]
+BASE 
+쿠션, 치크, 하이라이터, 쉐딩, 선크림 등 
+얼굴 기초 제품 및 색조
+
+EYE
+아이브로우, 아이라이너, 마스카라, 세럼, 팔레트 등
+눈 화장에 필요한 제품 및 색조
+
+LIP
+립밤, 틴트, 립스틱 등
+다양한 종류의 입술 색조
+
+NAIL
+롬앤 특유의 색감이 돋보이는
+페블 네일과 리무버
+
+TOOL
+쿠션퍼프, 뷰러, 퍼프, 브러쉬 등 
+다양한 화장 도구
+
+[셀렉션-롬앤에디션]
+롬앤 케미프로젝트 시즌2 #케미투게더 에디션
+롬앤 더 유니버스 글리터 에디션
+롬앤 Be original,rom&nd #한복프로젝트
+롬앤♥네온문 에디션 #rom&tic Moonight
+
+
+[셀렉션-리뷰]
+롬앤 글래스팅 멜팅밤
+롬앤 제로 매트 립스틱
+롬앤 제로 벨벳 틴트 #빈티지필터
+롬앤 베러 댄 아이즈 #오리지널시리즈
+롬앤 한올 래쉬 세럼
+롬앤 클리어 커버 쿠션 #한복프로젝트
+
+[푸터]
+마케팅/제휴 문의 | 해외 수출 문의 | 롬앤 오프라인 매장 | 온라인 멤버쉽 헤택
+폰트 : 카페24 써라운드에어
+@font-face {
+    font-family: 'Cafe24SsurroundAir';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2105_2@1.0/Cafe24SsurroundAir.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+롬앤 고객센터 1670-2238
+월-금 10:00~17:00
+점심시간 12:20~13:30
+토,일 공휴일 휴무
+
+(주)아이패밀리SC
+
+서울특별시 송파구 동남로 122(문정동) COLLECTED 빌딩   Tel : 02.1670.2238   Fax : 02.6910.4111   사업자등록번호 : 120-86-00633
+통신판매신고번호 : 제2022-서울송파-1690호   대표자 : 김태욱,김성현
+
+개인정보보호정책 이용약관동의
+&copy; 2017 IFAMILY SC, CO.,LTD.All Right Reserved.
