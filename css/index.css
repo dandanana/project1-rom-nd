@@ -1,4 +1,5 @@
 @import url(common.css);
+@import url('https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css');
 @font-face {
   font-family: 'GmarketSansMedium';
   src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansMedium.woff') format('woff');
@@ -24,7 +25,8 @@
   font-style: normal;
 }
 
-/* html{scroll-behavior: smooth;} */
+
+html{scroll-behavior: smooth;}
 
 body{
   font-family: 'GmarketSansMedium';
@@ -32,7 +34,16 @@ body{
   background-color: #f2fafc;
 }
 
-/* ------------탑버튼 : 수정 필요-----------------*/
+/* ------------탑버튼-----------------*/
+@keyframes circle{
+  0%{
+    transform: rotate(0);
+  }
+  100%{
+    transform: rotate(360deg);
+  }
+}
+
 .top{
   position: fixed;/* 고정시키겠다 */
   right: 30px;
@@ -43,9 +54,13 @@ body{
   width: 100px;
   height: 100px;
   background: url(../img/top.png) no-repeat;
+  animation: circle 5s infinite;
   transition: 0.3s;
 }
-.top a:hover{background-image:url(../img/top2.png);}
+.top a:hover{
+  background-image:url(/img/top2.png);
+  animation: circle 8s infinite reverse;}
+
 
 /* -------------헤더---------------- */
 
@@ -110,15 +125,16 @@ margin-bottom: -15px;}
 main{
   width: 100%;
   height: 600px;
-  background: url(../img/main-01.png) no-repeat center center;
+  background: url(/img/main-01.png) no-repeat center center;
   background-size: 100%;
 }
-main:hover{background-image: url(../img/main-02.png);}
+main:hover{background-image: url(/img/main-02.png);}
 
 
 /* ------------셀렉션---------------- */
 section{
   width: 100%;
+  text-align: center;
 }
 section>div{
   /* border: 1px solid #7c4dff; */
@@ -126,29 +142,17 @@ section>div{
 
 section h1{
   font-family: 'GmarketSansBold';
-  font-size: 50px;
+  font-size: 60px;
   color:#1b1b1b;
 }
+
 /* ++++++++++++신제품 타이틀++++++++++++++ */
 .new_title{
-  display: block;
   text-align: center;
   margin-top: 50px;
   margin-bottom: 100px;
-  position: relative;
-}
 
-.new_title:before,
-.new_title:after{
-  content: '';
-  width: 40%;
-  height: 1px;
-  background-color: #afa7a7;
-  position:absolute;
-  top: 30px;
 }
-.new_title:before{left: 0;}
-.new_title:after{right: 0;}
 
 /* ++++++++++++신제품 내용++++++++++++++ */
 .new{
@@ -221,25 +225,13 @@ section h1{
   margin-top: 20px;
 }
 
+
 /* ++++++++++++카테고리 타이틀++++++++++++++ */
 .cate_title{
-  display: block;
   text-align: center;
   margin-top: 150px;
   margin-bottom: 100px;
-  position: relative;
 }
-.cate_title:before,
-.cate_title:after{
-  content: '';
-  width: 33%;
-  height: 1px;
-  background-color: #afa7a7;
-  position:absolute;
-  top: 40px;
-}
-.cate_title:before{left: 0;}
-.cate_title:after{right: 0;}
 
 /* ++++++++++++카테고리 내용++++++++++++++ */
 .category{
@@ -350,32 +342,21 @@ section h1{
   line-height: 30px;
 }
 
+
 /* ++++++++++++롬앤-에디션 타이틀++++++++++++++ */
 .edi_title{
-  display: block;
   text-align: center;
   margin-top: 150px;
-  margin-bottom: 100px;
-  position: relative;
+  padding-top:20px;
+  background-color: #e9e0ff;
 }
-.edi_title:before,
-.edi_title:after{
-  content: '';
-  width: 28%;
-  height: 1px;
-  background-color: #afa7a7;
-  position:absolute;
-  top: 40px;
-}
-.edi_title:before{left: 0;}
-.edi_title:after{right: 0;}
 
 /* ++++++++++++롬앤-에디션 내용++++++++++++++ */
 .editions{
   display: flex;
   justify-content: center;
-  align-items: center;
-  
+  align-items: center;background-color: #e9e0ff;
+  height: 600px;
 }
 .edition{
   display: flex;
@@ -393,18 +374,253 @@ section h1{
   width: 320px;
   height: 320px;
 }
-.ed_caption{position:absolute;
+.ed_caption{
+  position:absolute;
   top:0;
   left: 0;
   width: inherit;
   height: inherit;
-  background-color: rgba(0, 0,  0, 0.7);/* 글자가 있는 경우에는 이거 사용 */
+  background-color: rgba(31, 30, 30, 0.7);
   color: #fff;
-  padding: 40px 20px 20px 20px;
-  box-sizing: border-box;/* 너비와 높이 안에 padding 값을 포함해라 */
-  line-height: 24px;/* 줄간격 */
-  opacity: 0;/* 0에서 */
+  padding: 30% 10%;
+  box-sizing: border-box;
+  line-height: 35px;
+  opacity: 0;
   transition: 0.5s;
 }
-
 .ed_img:hover .ed_caption{opacity: 1;}
+
+.ed_caption h3{
+  font-size: 20px;
+  margin-bottom: 40px ;
+}
+.ed_caption a{
+  border: 2px dotted rgb(247, 247, 193);
+  border-radius: 20px;
+  padding: 10px 20px;
+  font-family: 'GmarketSansLight';
+  font-size: 15px;
+  transition: 0.5s;
+}
+.ed_caption:hover a{
+  border: 4px dotted rgb(247, 247, 193);
+  font-size: 18px;
+  color:rgb(247, 247, 193);
+  font-family: 'GmarketSansMedium';
+}
+
+
+/* ++++++++++++리뷰 타이틀++++++++++++++ */
+.re_title{
+  text-align: center;
+  margin-top: 150px;
+  margin-bottom: 100px;
+}
+
+/* ++++++++++++리뷰 메뉴++++++++++++++ */
+
+.review_menu{
+  background-color: #fff;
+  border-radius: 20px;
+  width: 1400px;
+  height: 70px;
+  margin: auto;
+  margin-top: -30px;
+}
+.review_menu ul{/* ul안에 있는 내용물 */
+  height: inherit;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  font-family: 'Cafe24SsurroundAir';
+  font-size: 16px;
+  color: dimgray;
+}
+.review_menu ul li:nth-child(2){/* 하나만 반응형 상태로 두기 */
+  border-bottom:3px solid #ddd1fd;
+  font-weight: bold;
+  color: #4a4646;
+  font-size: 18px;
+  padding: 0 10px;
+  }
+
+/* ++++++++++++리뷰 이미지 위치++++++++++++++ */
+.review_img{
+  /* border: 1px solid #1b1b1b; */
+  width: 1400px;
+  margin: auto;
+  margin-top: 70px;
+}
+
+.review_img ul{overflow: hidden;} 
+.review_img ul li{
+  float: left;
+  margin-top: 40px;/* 리뷰이미지호버효과를위함 */
+  margin-right: 30px;
+  margin-bottom: 40px;
+  margin-left: 30px;
+  position: relative;/* 리뷰이미지내용 */
+  width: 400px;/* 리뷰이미지내용 */
+  height: 400px;/* 리뷰이미지내용 */
+  overflow: hidden;
+  transition: 0.5s;
+}
+.review_img ul li:last-child,
+.review_img ul li:nth-child(3){
+  margin-right: 0;
+}
+
+/* ++++++++++++리뷰 이미지 내용  ++++++++++++++ */
+.review_img img{border-radius: 15px;}
+.review_img ul li:hover{
+  transform: translateY(-20px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+  border-radius: 15px;
+}
+.review_ctent{
+  position: absolute;
+  top:100%;
+  left: 0;
+  color: #3e3d3de3;
+  width: inherit;
+  height: inherit;
+  font-family: 'GmarketSansLight';
+  padding: 180px 20px 20px;
+  box-sizing: border-box;
+  transition: 0.5s;
+}
+.review_img ul li:hover .review_ctent{top:0;}
+.review_img ul li:nth-child(1) .review_ctent{
+  background: linear-gradient(to top, rgba(248, 36, 72, 0.635), transparent);
+  border-radius: 15px;
+}
+.review_img ul li:nth-child(2) .review_ctent{
+  background: linear-gradient(to top, rgba(248, 36, 72, 0.635), transparent);
+  border-radius: 15px;
+}
+.review_img ul li:nth-child(3) .review_ctent{
+  background: linear-gradient(to top, rgba(248, 36, 72, 0.635), transparent);
+  border-radius: 15px;
+}
+.review_img ul li:nth-child(4) .review_ctent{
+  background: linear-gradient(to top, rgba(145, 220, 112, 0.869), transparent);
+  border-radius: 15px;
+}
+.review_img ul li:nth-child(5) .review_ctent{
+  background: linear-gradient(to top, rgba(160, 173, 250, 0.56), transparent);
+  border-radius: 15px;
+}
+.review_img ul li:nth-child(6) .review_ctent{
+  background: linear-gradient(to top, rgba(208, 133, 243, 0.56), transparent);
+  border-radius: 15px;
+}
+.review_ctent h4{
+  font-size: 30px;
+  font-family: 'GmarketSansBold';
+  color: #fff;
+  margin-bottom: 20px;
+}
+.review_ctent h4 span{
+  display: block;
+  font-size: 16px;
+  color: #ffffff;
+  font-family: 'GmarketSansLight';
+}
+.review_ctent a{
+  font-family: 'GmarketSansMedium';
+  font-size: 18px;
+  border: 2px solid #fff;
+  border-radius: 20px;
+  background-color: #fff;
+  padding: 3px 15px;
+  display: inline-block;
+  margin-top: 8px;
+  transition: 0.4s;
+}
+.review_ctent a:hover{
+  background-color: #c6f2fb;
+}
+.more{
+  display: inline-block;
+  font-family: 'GmarketSansLight';
+  font-size: 20px;
+  color: #e64a52;
+  border: 2px dotted #e64a52;
+  padding: 15px;
+  border-radius: 30px;
+  background-color: #fff;
+  transition: 0.45s;
+  margin-top: 50px;
+}
+.more:hover{
+  color: #222;
+  font-family: 'GmarketSansMedium';
+  border: 2px solid #e64a52;
+}
+
+
+/* ------------푸터---------------- */
+footer{
+  width: 100%;
+  height: 300px;
+  margin-top: 150px;
+  background-color: #e8e8e8;
+  
+}
+/* ++++++++++++푸터 작은 메뉴++++++++++++ */
+.footer_{
+  background-color: #f8eaef;
+  height: 80px;
+}
+.footer_menu{
+  width: 1400px;
+  height: 80px;
+  margin: auto;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  
+}
+.footer_menu a{
+  font-family: 'Cafe24SsurroundAir';
+  font-size: 20px;
+  transition: 0.5s;
+}
+.footer_menu a:before{
+  content:"\f061";
+  font-family: fontawesome;
+  margin-right: 10px;
+  opacity: 0;
+  transition: 0.5s;
+  }
+.footer_menu a:hover:before{opacity: 1;}
+.footer_menu:hover a{opacity: 0.3;}
+.footer_menu a:hover{opacity: 1;}
+
+/* ++++++++++++푸터 로고+내용++++++++++++ */
+.footer_logo{
+  width: 1400px;
+  height: 220px;
+  margin: auto;
+  display: flex;
+  align-items: center;
+}
+.footer_logo .text2{
+  margin-left: 150px;
+  line-height: 30px;
+}
+.footer_logo .text2 p{
+  font-family: 'GmarketSansLight';
+  color:rgb(165, 165, 166);
+  
+}
+.footer_logo .text2 p span{
+  font-size: 18px;
+  font-family: 'GmarketSansMedium';
+}
+address{
+  font-family: 'GmarketSansLight';
+  color: rgb(115, 114, 114);
+  font-style: normal;
+  font-size: 14px;
+}
